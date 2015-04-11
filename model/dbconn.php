@@ -4,7 +4,7 @@
 <?php
 echo "is it working?";
 phpinfo();
-$server = "tcp:rjv15kvxeq.database.windows.net";
+$server = "tcp:rjv15kvxeq.database.windows.net,1433";
 $user = "capsuletime"@SERVER_ID;
 $pwd = "Password1";
 $db = "rjv15kvxeq";
