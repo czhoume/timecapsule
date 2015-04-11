@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+wtf
 <?php
 echo "is it working?";
 phpinfo();
