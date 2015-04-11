@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <?php
 echo "is it working?";
 phpinfo();
@@ -15,3 +19,6 @@ if($conn === false){
 }
 
 ?>
+
+</body>
+</html>
