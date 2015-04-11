@@ -1,3 +1,5 @@
+<?php
+
 $server = "tcp:rjv15kvxeq.database.windows.net";
 $user = "capsuletime"@SERVER_ID;
 $pwd = "Password1";
@@ -10,3 +12,5 @@ if($conn === false){
 }else{
 	print_r("yay!");
 }
+
+?>
