@@ -1,5 +1,6 @@
 <?php
-
+echo "is it working?";
+phpinfo();
 $server = "tcp:rjv15kvxeq.database.windows.net";
 $user = "capsuletime"@SERVER_ID;
 $pwd = "Password1";
