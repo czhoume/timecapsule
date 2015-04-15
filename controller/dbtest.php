@@ -5,7 +5,7 @@ require_once '..\vendor\autoload.php';
 use WindowsAzure\Common\ServicesBuilder;
 use WindowsAzure\Common\ServiceException;
 
-$connectionString="DefaultEndpointsProtocol=https;AccountName=timecapsule;AccountKey=Svqu96cufSCabYoUWYs/2z38APOyEYftwJqS5ccFkLKpIQ+QPVhEYRoQt6mdcDbZ4Gj5b0elCcwRsEqc1a8peg==;UseDevelopmentStorage=true";
+$connectionString="DefaultEndpointsProtocol=https;AccountName=timecapsule;AccountKey=Svqu96cufSCabYoUWYs/2z38APOyEYftwJqS5ccFkLKpIQ+QPVhEYRoQt6mdcDbZ4Gj5b0elCcwRsEqc1a8peg==";
 
 
 // Create blob REST proxy.
