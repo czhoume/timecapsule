@@ -12,11 +12,13 @@ $connectionString="DefaultEndpointsProtocol=https;AccountName=timecapsule;Accoun
 $blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionString);
 
 
+$content = fopen("c:\tmpdownload\20150414ExtensionList.txt", "r");
 $blob_name = "myblob";
 
 try {
     //Upload blob
     $blobRestProxy->createBlockBlob("mycontainer", $blob_name, $content);
+	echo "uploaded";
 }
 catch(ServiceException $e){
     // Handle exception based on error codes and messages.
