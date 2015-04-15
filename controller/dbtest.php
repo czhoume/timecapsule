@@ -5,7 +5,7 @@ require_once '..\vendor\autoload.php';
 use WindowsAzure\Common\ServicesBuilder;
 use WindowsAzure\Common\ServiceException;
 
-$connectionString="DefaultEndpointsProtocol=https;AccountName=timecapsule;AccountKey=Svqu96cufSCabYoUWYs/2z38APOyEYftwJqS5ccFkLKpIQ+QPVhEYRoQt6mdcDbZ4Gj5b0elCcwRsEqc1a8peg==";
+$connectionString="DefaultEndpointsProtocol=https;AccountName=timecapsule;AccountKey=Svqu96cufSCabYoUWYs/2z38APOyEYftwJqS5ccFkLKpIQ+QPVhEYRoQt6mdcDbZ4Gj5b0elCcwRsEqc1a8peg==;";
 
 
 // Create blob REST proxy.
@@ -16,9 +16,8 @@ $content = fopen("c:\tmpdownload\20150414ExtensionList.txt", "r");
 $blob_name = "myblob";
 
 try {
-    //Upload blob
-    $blobRestProxy->createBlockBlob("mycontainer", $blob_name, $content);
-	echo "uploaded";
+    // Create container.
+    $blobRestProxy->createContainer("mycontainer", $createContainerOptions);
 }
 catch(ServiceException $e){
     // Handle exception based on error codes and messages.
