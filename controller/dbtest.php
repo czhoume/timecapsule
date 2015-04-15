@@ -1,3 +1,5 @@
+<?php
+
 require_once '..\vendor\autoload.php';
 
 use WindowsAzure\Common\ServicesBuilder;
@@ -47,3 +49,5 @@ catch(ServiceException $e){
     $error_message = $e->getMessage();
     echo $code.": ".$error_message."<br />";
 }
+
+?>
