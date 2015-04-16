@@ -13,7 +13,7 @@ $connectionString="DefaultEndpointsProtocol=http;AccountName=timecapsule;Account
 $blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionString);
 try{
 	$content = fopen("c:\\hacktest\\testtxt.txt", "r");
-}catch(E_WARNING $e){
+}catch(Exception $e){
 	echo $e->getMessage();
 }
 
