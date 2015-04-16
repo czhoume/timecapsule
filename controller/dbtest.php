@@ -14,6 +14,7 @@ $blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionSt
 try{
 	$content = fopen("c:\\hacktest\\testtxt.txt", "r");
 }catch(Exception $e){
+	echo "sth";
 	echo $e->getMessage();
 }
 
