@@ -13,7 +13,7 @@ $connectionString="DefaultEndpointsProtocol=https;AccountName=timecapsule;Accoun
 $blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionString);
 
 
-$content = fopen("c:\\tmpdownload\\20150414ExtensionList.txt", "r");
+$content = fopen("c:\tmpdownload\20150414ExtensionList.txt", "r");
 $blob_name = "myblob";
 
 try {
