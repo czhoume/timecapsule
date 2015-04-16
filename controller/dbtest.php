@@ -14,7 +14,7 @@ $connectionString="DefaultEndpointsProtocol=https;AccountName=timecapsule;Accoun
 // OPTIONAL: Set public access policy and metadata.
 // Create container options object.
 $createContainerOptions = new CreateContainerOptions(); 
-echo "yay!";
+
 // Set public access policy. Possible values are 
 // PublicAccessType::CONTAINER_AND_BLOBS and PublicAccessType::BLOBS_ONLY.
 // CONTAINER_AND_BLOBS:     
@@ -31,9 +31,10 @@ echo "yay!";
 // private to the account owner.
 // $createContainerOptions->setPublicAccess(PublicAccessType::CONTAINER_AND_BLOBS);
 
-// // Set container metadata
-// $createContainerOptions->addMetaData("key1", "value1");
-// $createContainerOptions->addMetaData("key2", "value2");
+// Set container metadata
+$createContainerOptions->addMetaData("key1", "value1");
+$createContainerOptions->addMetaData("key2", "value2");
+echo "yay2!";
 
 // try {
 //     // Create container.
