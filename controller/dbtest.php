@@ -40,7 +40,7 @@ $createContainerOptions->addMetaData("key2", "value2");
 try {
 	echo "ahead";
     // Create container.
-    $blobRestProxy->createContainer("text", $createContainerOptions);
+    $blobRestProxy->createContainer("video", $createContainerOptions);
     echo "created";
 }
 catch(ServiceException $e){
