@@ -34,19 +34,20 @@ $createContainerOptions = new CreateContainerOptions();
 // Set container metadata
 $createContainerOptions->addMetaData("key1", "value1");
 $createContainerOptions->addMetaData("key2", "value2");
-echo "yay2!";
 
-// try {
-//     // Create container.
-//     $blobRestProxy->createContainer("mycontainer2", $createContainerOptions);
-//     echo"created";
-// }
-// catch(ServiceException $e){
-//     // Handle exception based on error codes and messages.
-//     // Error codes and messages are here: 
-//     // http://msdn.microsoft.com/library/azure/dd179439.aspx
-//     $code = $e->getCode();
-//     $error_message = $e->getMessage();
-//     echo $code.": ".$error_message."<br />";
+try {
+    // Create container.
+    $blobRestProxy->createContainer("mycontainer2", $createContainerOptions);
+    echo"created";
+}
+catch(ServiceException $e){
+    // Handle exception based on error codes and messages.
+    // Error codes and messages are here: 
+    // http://msdn.microsoft.com/library/azure/dd179439.aspx
+    echo "bad!";
+
+    $code = $e->getCode();
+    $error_message = $e->getMessage();
+    echo $code.": ".$error_message."<br />";
 // }
 ?>
