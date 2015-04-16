@@ -12,12 +12,12 @@ $connectionString="DefaultEndpointsProtocol=http;AccountName=timecapsule;Account
 // Create blob REST proxy.
 $blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionString);
 // try{
-// 	$content = fopen("c:\\hacktest\\testtxt.txt", "r");
+	$content = fopen("c:\\hacktest\\testtxt.txt", "r");
 // }catch(exception $e){
 // 	echo e;
 // }
 
-$content = fopen("C:\\Users\\chizhou\\hacktest\\testtxt","r");
+// $content = fopen("C:\\Users\\chizhou\\hacktest\\testtxt","r");
 $blob_name = "myblob";
 
 try {
