@@ -3,8 +3,6 @@
 require_once '..\vendor\autoload.php';
 
 use WindowsAzure\Common\ServicesBuilder;
-use WindowsAzure\Blob\Models\CreateContainerOptions;
-use WindowsAzure\Blob\Models\PublicAccessType;
 use WindowsAzure\Common\ServiceException;
 
 $connectionString="DefaultEndpointsProtocol=https;AccountName=timecapsule;AccountKey=Svqu96cufSCabYoUWYs/2z38APOyEYftwJqS5ccFkLKpIQ+QPVhEYRoQt6mdcDbZ4Gj5b0elCcwRsEqc1a8peg==";
@@ -13,7 +11,7 @@ $connectionString="DefaultEndpointsProtocol=https;AccountName=timecapsule;Accoun
 $blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionString);
 
 
-$content = fopen("c:\tmpdownload\20150414ExtensionList.txt", "r");
+$content = fopen("c:\\tmpdownload\\20150414ExtensionList.txt", "r");
 $blob_name = "myblob";
 
 try {
