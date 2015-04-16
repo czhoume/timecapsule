@@ -9,6 +9,8 @@ use WindowsAzure\Common\ServiceException;
 
 $connectionString="DefaultEndpointsProtocol=http;AccountName=timecapsule;AccountKey=Svqu96cufSCabYoUWYs/2z38APOyEYftwJqS5ccFkLKpIQ+QPVhEYRoQt6mdcDbZ4Gj5b0elCcwRsEqc1a8peg==";
 
+// Create blob REST proxy.
+$blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionString);
 
 
 // OPTIONAL: Set public access policy and metadata.
@@ -38,7 +40,7 @@ $createContainerOptions->addMetaData("key2", "value2");
 try {
 	echo "ahead";
     // Create container.
-    // $blobRestProxy->createContainer("mycontainer23", $createContainerOptions);
+    $blobRestProxy->createContainer("text", $createContainerOptions);
     echo "created";
 }
 catch(ServiceException $e){
