@@ -36,9 +36,10 @@ $createContainerOptions->addMetaData("key1", "value1");
 $createContainerOptions->addMetaData("key2", "value2");
 
 try {
+	echo "ahead";
     // Create container.
     $blobRestProxy->createContainer("mycontainer2", $createContainerOptions);
-    echo"created";
+    echo "created";
 }
 catch(ServiceException $e){
     // Handle exception based on error codes and messages.
